@@ -1,0 +1,31 @@
+{
+  "name": "altveda-visual-studio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AltVeda AI video production pipeline — cloud-free, all-open-source",
+  "scripts": {
+    "build": "tsc --noEmit",
+    "render": "tsx scripts/render.ts",
+    "render:founder": "tsx scripts/render.ts --template founder-story",
+    "render:product": "tsx scripts/render.ts --template product-showcase",
+    "render:short": "tsx scripts/render.ts --template social-short",
+    "render:tv": "tsx scripts/render.ts --template tv-commercial",
+    "claimcheck": "tsx engines/claim-checker.ts",
+    "scrape:assets": "tsx engines/asset-scraper.ts",
+    "generate:script": "tsx engines/script-generator.ts",
+    "test": "echo 'No tests yet'"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.1",
+    "ffmpeg": "^0.0.4",
+    "remotion": "^4.0.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@remotion/bundler": "^4.0.0",
+    "@remotion/cli": "^4.0.0",
+    "@remotion/renderer": "^4.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
